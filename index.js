@@ -6,6 +6,6 @@ app.use(express.static(__dirname+'/Public'))
 app.get('/',(req,res)=>{
 	res.sendFile(__dirname+'/index.html');
 });
-http.listen(app.get('port')||3000,()=>{
+http.listen(process.env.PORT||3000,()=>{
 	console.log('listening on port 3000')
 });
